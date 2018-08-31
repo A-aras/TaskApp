@@ -1,0 +1,36 @@
+  <td>
+    <div class="HighlightDiv">
+
+        <span class="label label-default label-fill">{{RowData.TaskDescription}}</span>
+        <!-- <span >{{RowData.TaskDescription}}</span> -->
+      </div>
+    </td>
+    <td>
+          <!-- <span class="badge badge-secondary">{{RowData.ParentTask.Parent_Task}}</span> -->
+          <span class="label label-default label-fill">{{RowData.ParentTask.Parent_Task}}</span>
+          <!-- {{RowData.parentTask}} -->
+        </td>
+        <td>
+          {{RowData.Priority}}
+        </td>
+        <td>
+          {{RowData.StartDate|date:"dd/MMM/yyyy"}}
+        </td>
+        <td>
+          {{RowData.EndDate|date:"dd/MMM/yyyy"}}
+        </td>
+  
+        <td>
+        <div class="row">
+          <div class="col-md-4">
+              <button class="btn-primary" [disabled]="RowData.IsClosed" (click)="OnEdit()">Edit</button>
+          </div>
+          <div class="col-md-4">
+              <button class="btn-primary" [disabled]="RowData.IsClosed" (click)="OnEndTask()">End Taks</button>
+          </div>
+          <div class="col-md-4">
+                <button class="btn-primary" (click)="OnDelete()">Delete</button>
+            </div>
+          </div>
+        </td>
+      

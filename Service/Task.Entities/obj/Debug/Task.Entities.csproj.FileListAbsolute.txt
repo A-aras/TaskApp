@@ -1,0 +1,10 @@
+C:\FSD\Service\Task.Entities\bin\Debug\Task.Entities.dll
+C:\FSD\Service\Task.Entities\bin\Debug\Task.Entities.pdb
+C:\FSD\Service\Task.Entities\obj\Debug\Task.Entities.dll
+C:\FSD\Service\Task.Entities\obj\Debug\Task.Entities.pdb
+C:\FSD\Service\Task.Entities\obj\Debug\Task.Entities.csprojResolveAssemblyReference.cache
+C:\Task_Capsule\TaskManager\Service\Task.Entities\bin\Debug\Task.Entities.dll
+C:\Task_Capsule\TaskManager\Service\Task.Entities\bin\Debug\Task.Entities.pdb
+C:\Task_Capsule\TaskManager\Service\Task.Entities\obj\Debug\Task.Entities.csprojResolveAssemblyReference.cache
+C:\Task_Capsule\TaskManager\Service\Task.Entities\obj\Debug\Task.Entities.dll
+C:\Task_Capsule\TaskManager\Service\Task.Entities\obj\Debug\Task.Entities.pdb

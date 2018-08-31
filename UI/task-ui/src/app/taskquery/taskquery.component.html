@@ -1,0 +1,72 @@
+<!-- <span class="badge badge-secondary">Click here to search</span> -->
+<div class="container">
+    <form [formGroup]="myform" (ngSubmit)="OnAddTask()">
+        <div class="table-row" >
+            <div class="col-*-6">
+                <div class="input-group">
+                    <label for="taskInput">Task: </label>
+                    <input id="taskInput" type="text" placeholder="Task Description" class="form-control" [formControl]="taskName" />
+                </div>
+            </div>
+
+
+            <div class="col-*-6">
+                <div class="input-group">
+                    <label for="parentTask">Parent Task: </label>
+                    <select class="form-control" id="parentTask" [formControl]="parentTask">
+                        <option value="">--Select--</option>
+                        <option *ngFor="let paretnTask of ParentTasks" [ngValue]="paretnTask.ParentTaskId">{{paretnTask.Parent_Task}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-*-6">
+
+                <form [formGroup]="">
+                    <div class="row">
+                        <div class="col-*-6">
+                            <div class="input-group">
+                                <label for="priorityFrom">Priority From: </label>
+                                <input id="priorityFrom" type="text" placeholder="Priority From" class="form-control" [formControl]="PriorityFrom" />
+                            </div>
+                        </div>
+                        <div class="col-*-6">
+                            <div class="input-group">
+                                <label for="priorityTo">Priority To: </label>
+                                <input id="priorityTo" type="text" placeholder="Priority To" class="form-control" [formControl]="PriorityTo" />
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <!-- <div class="col-md-6">
+                <div class="input-group">
+                    <label for="parentTask">Parent Task: </label>
+                    <select class="form-control" id="parentTask" [formControl]="parentTask">
+                        <option value="">--Select--</option>
+                        <option *ngFor="let paretnTask of ParentTasks" [ngValue]="paretnTask.ParentTaskId">{{paretnTask.Parent_Task}}</option>
+                    </select>
+                </div>
+            </div> 
+</div>-->
+
+    </form>
+
+    <!-- <div class="row">
+        <div class="col-lg-3">
+            <input type="text" [{ngmodel}]="Model.TaskName" />
+        </div>
+    </div>
+    <div class="row">
+        
+    </div> -->
+</div>
+<!-- <button class="btn-primary" (click)="search()">Search</button> -->

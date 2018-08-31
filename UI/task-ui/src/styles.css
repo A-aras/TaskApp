@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import "~bootstrap/dist/css/bootstrap.css" */
+
+/* body{
+background-color: blue
+} */
+
+.HighlightDiv
+{
+    background-color: silver
+}
+
+.label-fill
+{
+    display: block;
+    /* margin: .3em;
+    padding: .3em; */
+    background-color: silver
+
+}
+
+.table-row
+{
+    display: table;
+}
+
+.table-row[class*="col-"]
+{
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
