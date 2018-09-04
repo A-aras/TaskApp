@@ -7,7 +7,7 @@
     </td>
     <td>
           <!-- <span class="badge badge-secondary">{{RowData.ParentTask.Parent_Task}}</span> -->
-          <span class="label label-default label-fill">{{RowData.ParentTask.Parent_Task}}</span>
+          <span class="label label-default label-fill" *ngIf="RowData.ParentTask">{{RowData.ParentTask.Parent_Task}}</span>
           <!-- {{RowData.parentTask}} -->
         </td>
         <td>

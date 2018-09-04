@@ -56,7 +56,10 @@ export class TaskqueryComponent implements OnInit {
     this.myform = new FormGroup({ taskName: this.taskName, priority: this.priorityFormGroup, parentTask: this.parentTask, dateGroup: this.dateFormGroup });
 
     this.myform.valueChanges.pipe(
-      filter(x => this.myform.valid)
+      filter(x =>{
+
+      return this.myform.valid;
+      })
     ).pipe(map(x => {
 
       this.Model.TaskName=this.taskName.value;

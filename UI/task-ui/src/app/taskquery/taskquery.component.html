@@ -1,72 +1,50 @@
 <!-- <span class="badge badge-secondary">Click here to search</span> -->
-<div class="container">
-    <form [formGroup]="myform" (ngSubmit)="OnAddTask()">
-        <div class="table-row" >
-            <div class="col-*-6">
-                <div class="input-group">
-                    <label for="taskInput">Task: </label>
-                    <input id="taskInput" type="text" placeholder="Task Description" class="form-control" [formControl]="taskName" />
-                </div>
-            </div>
+<!-- <div class="container"> -->
+<form [formGroup]="myform" (ngSubmit)="OnAddTask()" name="myform" id="myform">
 
+    <div class="container-fluid text-left  ">
 
-            <div class="col-*-6">
-                <div class="input-group">
-                    <label for="parentTask">Parent Task: </label>
-                    <select class="form-control" id="parentTask" [formControl]="parentTask">
-                        <option value="">--Select--</option>
-                        <option *ngFor="let paretnTask of ParentTasks" [ngValue]="paretnTask.ParentTaskId">{{paretnTask.Parent_Task}}</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-*-6">
-
-                <form [formGroup]="">
-                    <div class="row">
-                        <div class="col-*-6">
-                            <div class="input-group">
-                                <label for="priorityFrom">Priority From: </label>
-                                <input id="priorityFrom" type="text" placeholder="Priority From" class="form-control" [formControl]="PriorityFrom" />
-                            </div>
-                        </div>
-                        <div class="col-*-6">
-                            <div class="input-group">
-                                <label for="priorityTo">Priority To: </label>
-                                <input id="priorityTo" type="text" placeholder="Priority To" class="form-control" [formControl]="PriorityTo" />
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
-
-            </div>
+        <div class="form-group form-inline col-md-12 ">
+            <label for="taskInput" class="col-md-2 ">Task: </label>
+            <input id="taskInput" type="text" placeholder="Task Description" class="form-control col-md-4" [formControl]="taskName" />
+            <!--  -->
+            <label for="parentTask" class="col-md-2">Parent Task: </label>
+            <!-- <input id="taskInput" type="text" placeholder="Task Description" class="form-control col-sm-5" [formControl]="taskName" /> -->
+            <input class="form-control col-md-4" [formControl]="parentTask" list="parentTaskList" type="text" id="parentTaskInput">
+            <datalist id="parentTaskList">
+                <option value="">--Select--</option>
+                <option *ngFor="let paretnTaskOj of ParentTasks" [ngValue]="paretnTaskOj.ParentTaskId">{{paretnTaskOj.Parent_Task}}</option>
+            </datalist>
         </div>
 
 
-
-        <!-- <div class="col-md-6">
-                <div class="input-group">
-                    <label for="parentTask">Parent Task: </label>
-                    <select class="form-control" id="parentTask" [formControl]="parentTask">
-                        <option value="">--Select--</option>
-                        <option *ngFor="let paretnTask of ParentTasks" [ngValue]="paretnTask.ParentTaskId">{{paretnTask.Parent_Task}}</option>
-                    </select>
+        <div class="form-group form-inline">
+            <form [formGroup]="priorityFormGroup" class="col-md-6">
+                <div class="form-group form-inline">
+                    <label for="priorityFrom" class="col-md-2">Priority From: </label>
+                    <input id="priorityFrom" type="text" placeholder="Priority From" class="form-control col-md-4" [formControl]="priorityFrom"
+                    />
+                    <label for="priorityTo" class="col-md-2">Priority To: </label>
+                    <input id="priorityTo" type="text" placeholder="Priority To" class="form-control col-md-4" [formControl]="priorityTo" />
                 </div>
-            </div> 
-</div>-->
+            </form>
 
-    </form>
-
-    <!-- <div class="row">
-        <div class="col-lg-3">
-            <input type="text" [{ngmodel}]="Model.TaskName" />
+            <form [formGroup]="dateFormGroup" class="col-md-6">
+                <div class="form-group form-inline">
+                    <label for="startDate" class="col-md-2">Start Date: </label>
+                    <input id="startDate" type="text" placeholder="Start Date" class="form-control col-md-4" [formControl]="startDate" />
+                    <label for="endDate" class="col-md-2">End Date: </label>
+                    <input id="endDate" type="text" placeholder="End Date" class="form-control col-md-4" [formControl]="endDate" />
+                </div>
+            </form>
         </div>
+
     </div>
-    <div class="row">
-        
-    </div> -->
+
+
+
+</form>
+
+<div class="container">
+    <pre> {{myform.value |json}} </pre>
 </div>
-<!-- <button class="btn-primary" (click)="search()">Search</button> -->
